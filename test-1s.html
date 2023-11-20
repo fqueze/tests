@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      (function burn1sOfCPU() {
+        setTimeout(burn1sOfCPU, 1000);
+        let startTime = Date.now();
+        while (Date.now() - startTime < 1000)
+          ;
+      })();
+    </script>
+    <p>This test will try to use 1s of CPU time every 1s.</p>
+    <p>Use it to compare the power use of a content process in the foreground or background priority.</p>
+  </body>
+</html>

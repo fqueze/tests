@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var lastTime = Date.now();
+      (function burnCPU(ms) {
+        let startTime = Date.now();
+        document.title = startTime - lastTime;
+        lastTime = startTime;
+        setTimeout(burnCPU, ms, ms);
+        while (Date.now() - startTime < ms)
+          ;
+      })(10);
+    </script>
+    <p>This test will try to use 10ms of CPU time every 10ms (using setTimeout).</p>
+    <p>It will display in the document title the time it took before the callback was called.</p>
+    <p>This is useful to check how timers are throttled in background tabs.</p>
+  </body>
+</html>

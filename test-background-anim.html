@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <style>
+      body {
+        background: linear-gradient(25deg, green, blue, orange);
+        background-size: 1000% 1000%;
+        animation: back 2s infinite;
+        height: 100%;
+      }
+
+      @keyframes back {
+        0%, 100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+      p {
+        background-color: white;
+        margin: 0;
+        padding: 1em
+      }
+    </style>
+    <p>Test animating the entire background of the page.</p>
+  </body>
+</html>

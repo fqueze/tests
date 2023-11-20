@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      (function runFiboEvery1s() {
+	setTimeout(runFiboEvery1s, 1000);
+	function fibo(n) {
+	  if (n < 2)
+	    return 1;
+	  return fibo(n-1) + fibo(n-2);
+	}
+	fibo(37);
+      })();
+    </script>
+    <p>Compute <em>fibo(37)</em> (using an inefficient recursive algorithm) every 1s.</p>
+    <p>Useful to compare the power use and time it takes to run a fixed amount of computation in the foreground or background priority.</p>
+  </body>
+</html>
