@@ -1,0 +1,12 @@
+<html>
+  <head><title>timer</title></head>
+  <body>
+    <script>
+      (function wakeUp() {
+        setTimeout(wakeUp, 0);
+      })();
+    </script>
+    <p>This test will try to wake-up as often as possible using 0ms setTimeout calls.</p>
+    <p>This is useful to check how frequent wake-ups affect power use and how timers are throttled in background tabs.</p>
+  </body>
+</html>
